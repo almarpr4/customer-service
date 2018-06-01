@@ -3,7 +3,6 @@ package com.example.customerservice;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.validator.constraints.Email;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -22,7 +21,7 @@ class Customer {
 	@NotNull
 	private String firstName, lastName;
 
-	@Email
+	@org.hibernate.validator.constraints.Email
 	@NotNull
 	private String email;
 }
